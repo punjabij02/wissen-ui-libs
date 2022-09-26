@@ -4,6 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "version": "independent",
   "devDependencies": {
     "lerna": "^5.5.1"
   }

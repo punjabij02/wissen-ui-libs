@@ -1,16 +1,20 @@
-# stencil-ds-react-template
-
-This is an example repo of building plugins.
+# @wissen-libs/wissen-react-lib
 
 ## Step 1.
 
-- Update the `package.json` to have the correct package name for this repo.
-- Replace `component-library` under `dependencies` with your core stencil package name.
+- Build your core stencil package. (@wissen-libs/wissen-ui-lib) and publish if changes are there.
 
 ## Step 2.
 
-- Build your core stencil package.
+- Run build on this package. Publish the package.
 
 ## Step 3.
 
-- Run build on this package.
+- Include @wissen-libs/wissen-ui-lib and @wissen-libs/wissen-react-lib as dependencies in the React web application.
+
+## Step 4.
+
+- import stencil web component as React component by importing the library
+```
+import WsInput from '@wissen-libs/wissen-react-lib'
+```

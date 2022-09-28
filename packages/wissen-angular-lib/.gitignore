@@ -40,6 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Stencil generated files
-/src/libs/stencil-generated/angular-component-lib

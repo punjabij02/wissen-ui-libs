@@ -12,8 +12,8 @@ export const config: Config = {
     }),
     angularOutputTarget({
       componentCorePackage: '@wissen-libs/wissen-ui-lib',
-      directivesProxyFile: '../wissen-angular-lib/src/libs/stencil-generated/components.ts',
-      directivesArrayFile: '../wissen-angular-lib/src/libs/stencil-generated/index.ts',
+      directivesProxyFile: '../wissen-angular-lib/projects/angular-library/src/stencil-generated/components.ts',
+      directivesArrayFile: '../wissen-angular-lib/projects/angular-library/src/stencil-generated/index.ts',
     }),
     {
       type: 'dist',

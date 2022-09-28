@@ -1,11 +1,11 @@
 {
   "name": "@wissen-libs/wissen-react-lib",
   "sideEffects": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React specific wrapper for component-library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic.git"
+    "url": "https://github.com/wissen-ui/wissen-ui-libs/tree/master/packages/wissen-react-lib"
   },
   "scripts": {
     "build": "npm run clean && npm run compile",

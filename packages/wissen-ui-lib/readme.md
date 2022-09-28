@@ -33,27 +33,55 @@ To open storybook, run:
 npm run storybook
 ```
 
-## Naming Components (Wissen)
+## Naming Components
 
 We recommend prefix the component name with `ws-` untill it is decided otherwise.
 
-## Using this component
+## Publishing and consuming the components
 
-There are three strategies we recommend for using web components built with Stencil.
+Publish the package to [@wissen-libs/wissen-ui-lib](https://www.npmjs.com/package/@wissen-libs/wissen-ui-lib)
 
-The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+Install the package
+```
+npm install @wissen-libs/wissen-ui-lib --save
+```
 
-### Script tag
+### Consuming in React
 
-- Put a script tag similar to this `<script type='module' src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+use web component anywhere in JSX
+```
+<div>
+  <ws-input value ="wissen" />
+</div>
+```
 
-### Node Modules
-- Run `npm install my-component --save`
-- Put a script tag similar to this `<script type='module' src='node_modules/my-component/dist/my-component.esm.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+### Consuming in Angular
 
-### In a stencil-starter app
-- Run `npm install my-component --save`
-- Add an import to the npm packages `import my-component;`
-- Then you can use the element anywhere in your template, JSX, html etc
+Add the changes in main.ts of angular app
+```
+import { defineCustomElements } from '@wissen-libs/wissen-ui-lib/loader';
+defineCustomElements();
+```
+
+Add CUSTOM_ELEMENTS_SCHEMA to app.module.ts
+```
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+```
+
+Add CUSTOM_ELEMENTS_SCHEMA as schema in @NgModule  
+Then you can use the element anywhere in your template, JSX, html etc
+
+```
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+```

@@ -7,9 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `value`  | `value`   | value       | `string` | `undefined` |
+| Property  | Attribute | Description | Type      | Default     |
+| --------- | --------- | ----------- | --------- | ----------- |
+| `checked` | `checked` |             | `boolean` | `undefined` |
+| `label`   | `label`   |             | `string`  | `undefined` |
+| `name`    | `name`    |             | `string`  | `undefined` |
+| `value`   | `value`   | value       | `string`  | `undefined` |
 
 
 ----------------------------------------------

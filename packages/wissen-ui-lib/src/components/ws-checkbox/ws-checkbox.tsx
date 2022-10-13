@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Fragment } from '@stencil/core';
 
 @Component({
   tag: 'ws-checkbox',
@@ -11,7 +11,33 @@ export class WsCheckbox {
    */
   @Prop() value: string;
 
+  @Prop() label: string;
+
+  @Prop() name: string;
+
+  @Prop() checked: boolean;
+
+  componentDidUpdate(){
+    console.log('updating...');
+    console.log(this.name);
+    console.log(this.checked);
+    console.log(this.value)
+  }
+
+  
+
+  onClick(event){
+    console.log(event);
+    this.checked=!this.checked;
+    console.log('checked');
+
+  }
   render() {
-    return <span>{this.value}</span>;
+    return (
+    
+      <Fragment>
+        <label htmlFor={this.name}>{this.label}</label><input type='checkbox' name={this.name} checked={this.checked} onClick={this.onClick.bind(this)}>{this.value}</input>
+      </Fragment>
+    );
   }
 }
